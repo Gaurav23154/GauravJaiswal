@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const projects = [
+  // ... (keep your existing projects array)
   {
     title: "Vibes Connecting College Student's",
     description:
@@ -63,70 +65,63 @@ const projects = [
   },
 ];
 
-const Project = () => {
+const Projects = () => {
   const [showMore, setShowMore] = useState(false);
-  const visiblityProject = showMore ? projects : projects.slice(0, 3);
 
   return (
-    <section
-      id="project"
-      className="w-full flex flex-col items-center justify-center py-5 px-4 min-h-screen"
-    >
-      {/* Heading */}
-      <div className="flex items-center flex-wrap mb-8">
-        <div className="flex items-baseline whitespace-nowrap">
-          <span className="mr-2 font-normal text-base text-[#64ffda]">02.</span>
-          <span className="text-[#ccd6f6] text-2xl sm:text-3xl font-semibold">
-            Some Things I've Built
-          </span>
-        </div>
-        <div className="ml-4 h-[1px] bg-[#42649d] opacity-50 w-20 sm:w-32 md:w-60 lg:w-80"></div>
+    <section id="projects" className="w-full py-20 px-4 sm:px-8 max-w-6xl mx-auto">
+      <div className="flex items-center mb-16">
+        <span className="text-[#64ffda] font-mono mr-4">02.</span>
+        <h2 className="text-[#ccd6f6] text-3xl font-bold">My Projects</h2>
+        <div className="ml-6 h-px bg-[#233554] flex-1"></div>
       </div>
 
-      {/* Responsive Grid for Projects */}
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
-        {visiblityProject.map((project, idx) => (
-          <li
-            key={idx}
-            className="transition-transform duration-300 transform hover:-translate-y-2 shadow-[rgba(2,12,27,0.7)] border-2 border-[#112240] rounded-md py-5 bg-[#0a192f]"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {(showMore ? projects : projects.slice(0, 6)).map((project, index) => (
+          <div 
+            key={index}
+            className="bg-[#112240] rounded-lg overflow-hidden border border-[#1e2a47] hover:border-[#64ffda] transition-all duration-300 hover:-translate-y-2 shadow-lg group"
           >
-            <div className="px-5">
-              <div className="flex justify-between text-lg text-[#64ffda] mb-2">
-                <div className="cursor-pointer">📁</div>
-                <div className="flex gap-2 cursor-pointer">
-                 <a href={project.github} target="_blank" rel="noopener noreferrer">Github</a>
-                  <a href={project.livelink} target="_blank" rel="noopener noreferrer">Share</a>
+            <div className="p-6 h-full flex flex-col">
+              <div className="flex justify-between mb-6">
+                <div className="text-[#64ffda] text-3xl">📁</div>
+                <div className="flex gap-4 text-[#a8b2d1]">
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#64ffda] transition">
+                      <FiGithub size={20} />
+                    </a>
+                  )}
+                  {project.livelink && (
+                    <a href={project.livelink} target="_blank" rel="noopener noreferrer" className="hover:text-[#64ffda] transition">
+                      <FiExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
 
-              <p className="text-[#64ffda] text-sm font-normal">
-                Featured Project
-              </p>
-              <h3 className="text-[#e6f1ff] text-2xl font-semibold cursor-pointer hover:text-[#64ffda]">
+              <h3 className="text-[#e6f1ff] text-xl font-bold mb-3 group-hover:text-[#64ffda] transition">
                 {project.title}
               </h3>
+              <p className="text-[#8892b0] mb-6 flex-grow">{project.description}</p>
 
-              <div className="py-4">
-                <p className="text-base text-[#a8b2d1] leading-relaxed">
-                  {project.description}
-                </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-xs text-[#64ffda] bg-[#64ffda]/10 px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
-
-            <div className="text-[#8892b0] px-5 font-mono">
-              <ul className="flex flex-wrap gap-3 text-sm">
-                {project.tech.map((val, idx) => (
-                  <li key={idx}>{val}</li>
-                ))}
-              </ul>
-            </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <button
         onClick={() => setShowMore(!showMore)}
-        className="text-[#64ffda] border-2 rounded-md border-[#64ffda] p-2.5 cursor-pointer hover:bg-[#334240] my-10 "
+        className="mt-16 mx-auto block border border-[#64ffda] text-[#64ffda] px-8 py-3 rounded hover:bg-[#64ffda]/10 transition-colors duration-300"
       >
         {showMore ? "Show Less" : "Show More"}
       </button>
@@ -134,4 +129,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

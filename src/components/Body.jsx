@@ -1,35 +1,58 @@
 const Body = () => {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-40 bg-[#0a192f]"
-    >
-      <div className="max-w-4xl w-full flex flex-col items-start gap-6 text-left">
-        <h1 className="text-[#64ffda] text-sm sm:text-base md:text-lg font-mono">
-          Hi, my name is
-        </h1>
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-40 bg-[#0a192f] pt-20">
+      <div className="max-w-4xl w-full">
+        <div className="space-y-6">
+          {/* Greeting */}
+          <div className="animate-fade-in">
+            <p className="text-[#64ffda] font-mono text-sm">Hi, my name is</p>
+          </div>
 
-        <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-[#ccd6f6] leading-tight">
-          Gaurav Jaiswal.
-        </h2>
+          {/* Name */}
+          <div className="animate-slide-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ccd6f6]">
+              Gaurav Kumar.
+            </h1>
+          </div>
 
-        <h3 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#8892b0] leading-tight">
-          I build things for the web.
-        </h3>
+          {/* Tagline */}
+          <div className="animate-slide-up-delay">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#8892b0]">
+              I build things for the web.
+            </h2>
+          </div>
 
-        <p className="text-[#8892b0] text-sm sm:text-base md:text-lg max-w-2xl mt-2 sm:mt-4">
-          I’m a  software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building accessible, human-centered projects.
-        </p>
+          {/* Description */}
+          <div className="animate-fade-in-delay">
+            <p className="text-[#8892b0] max-w-2xl">
+              I'm a software engineer specializing in building exceptional digital experiences.
+              Currently, I'm focused on building accessible, human-centered products.
+            </p>
+          </div>
 
-        <a
-          href="#project"
-          
-          className="mt-6 inline-block border border-[#64ffda] text-[#64ffda] px-6 py-3 rounded hover:bg-[#112240] transition duration-300 font-mono text-sm"
-        >
-          Check out my work!
-        </a>
+          {/* CTA Button */}
+          <div className="animate-fade-in-delay-2">
+            <a
+              href="#contact"
+              className="inline-flex items-center px-6 py-3 border border-[#64ffda] text-[#64ffda] rounded-md hover:bg-[#112240] transition-all font-mono text-sm group"
+            >
+              <span>Get In Touch</span>
+              <svg
+                className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-all"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

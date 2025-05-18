@@ -2,77 +2,65 @@ import photo from "../assets/image/gauravphoto.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen flex flex-col lg:flex-row items-center justify-center max-w-5xl px-4 sm:px-8 mx-auto py-20 gap-16">
+    <section id="about" className="min-h-screen py-20 flex flex-col lg:flex-row items-center justify-center max-w-6xl mx-auto px-4 sm:px-8 gap-12 lg:gap-24">
       {/* Text Section */}
-      <div className="flex flex-col w-fit">
-        {/* Section Heading */}
-        <div className="flex items-center mb-10">
-          <span className="mr-3 text-[#64ffda] font-mono text-xl">01.</span>
-          <h2 className="text-[#ccd6f6] text-3xl font-semibold whitespace-nowrap">
-            About Me
-          </h2>
-          <div className="ml-4 w-full h-px bg-[#233554]"></div>
+      <div className="flex-1">
+        <div className="flex items-center mb-8">
+          <span className="text-[#64ffda] font-mono mr-4 text-xl">01.</span>
+          <h2 className="text-[#ccd6f6] text-3xl font-bold">About Me</h2>
+          <div className="ml-6 h-px bg-[#233554] flex-1"></div>
         </div>
 
-        {/* Description */}
-        <div className="text-[#8892b0] text-base sm:text-lg leading-relaxed space-y-4">
+        <div className="text-[#8892b0] space-y-6 text-lg leading-relaxed">
           <p>
-          I’m a passionate Full Stack Developer with strong problem-solving
-          skills and a knack for building clean, user-centric web applications.
-          Proficient in the MERN stack (MongoDB, Express.js, React, Node.js), I
-          bring ideas to life through scalable and responsive designs. I’ve led
-          impactful projects like Vibes, a social platform that gained 150+
-          users on launch day, and developed tools like an Income Expense
-          Tracker. With 400+ DSA problems solved and I enjoy breaking down
-          complex logic.
+            I'm a <span className="text-[#64ffda]">Full Stack Developer</span> passionate about building 
+            performant, accessible, and visually stunning web applications.
           </p>
           <p>
-            I have a passion for clean UI, maintainable code, and continuous
-            learning. My current focus is on creating accessible, fast, and
-            user-focused products.
+            With expertise in the <span className="text-[#64ffda]">MERN stack</span>, I've built projects like 
+            social platforms with 150+ users and productivity tools that solve real-world problems.
+          </p>
+          <p>
+            I thrive on turning complex problems into elegant solutions while maintaining 
+            clean, maintainable code.
           </p>
         </div>
 
-        {/* Tech List */}
-        <div className="text-[#8892b0] text-base sm:text-lg mt-6">
-          Here are a few technologies I’ve been working with recently:
-        </div>
-        <div className="flex flex-wrap gap-6 mt-4">
-          <ul className="list-none text-[#64ffda] font-mono space-y-1">
-            <li>▸ JavaScript (ES6+)</li>
-            <li>▸ React.js</li>
-            <li>▸ Node.js</li>
-          </ul>
-          <ul className="list-none text-[#64ffda] font-mono space-y-1">
-            <li>▸ Express.js</li>
-            <li>▸ Tailwind CSS</li>
-            <li>▸ Redux</li>
-          </ul>
+        <div className="mt-12">
+          <h3 className="text-[#ccd6f6] mb-6">Technologies I Use:</h3>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              "JavaScript (ES6+)",
+              "React.js",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "Tailwind CSS",
+              "Redux",
+              "Git/GitHub"
+            ].map((tech, index) => (
+              <div key={index} className="flex items-center">
+                <span className="text-[#64ffda] mr-3">▹</span>
+                <span className="text-[#a8b2d1]">{tech}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Image Section */}
-      <div className="flex-1 flex justify-center lg:justify-end">
-  <div className="relative group w-64 h-64 sm:w-72 sm:h-72">
-    
-    {/* Border Layer */}
-    <div className="absolute top-0 left-0 w-full h-full rounded-md border-2 border-[#64ffda] transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-300 ease-in-out z-0"></div>
-    
-    {/* Image Container with Green Tint */}
-    <div className="relative z-10 w-full h-full overflow-hidden rounded-md bg-[#64ffda] group-hover:bg-transparent transition-all duration-300 ease-in-out">
-      <img
-        src={photo}
-        alt="Gaurav's profile"
-        className="w-full h-full object-cover rounded-md mix-blend-multiply filter grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
-      />
-    </div>
-    
-  </div>
-</div>
-
-
-      
-
+      <div className="relative mt-16 lg:mt-0 group">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-lg overflow-hidden">
+          <div className="absolute inset-0 border-2 border-[#64ffda] rounded-lg translate-x-6 translate-y-6 group-hover:translate-x-4 group-hover:translate-y-4 transition-all duration-300 z-0"></div>
+          <div className="relative w-full h-full bg-[#64ffda] rounded-lg overflow-hidden group-hover:bg-transparent transition-all duration-300 z-10">
+            <img
+              src={photo}
+              alt="Gaurav Jaiswal"
+              className="w-full h-full object-cover mix-blend-multiply grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
