@@ -12,12 +12,34 @@ const projects = [
     livelink: "https://vibes-incampus.vercel.app/",
   },
   {
+    title: "Finance Visualizer",
+    description:
+    "A responsive and interactive React-based web application that helps users track their personal finances with features like transaction tracking, budget setting, data visualizations, and dashboardsart matching questionnaire and intuitive UI.",
+    tech: ["React.js", "Redux", "TailwindCSS", "Recharts","React Toastify"],
+    github: "https://github.com/Gaurav23154/Finanace-visulaizer.git",
+    livelink: "https://finanace-visulaizer.vercel.app/",
+  },
+  {
+    title: "Income Expense Tracker",
+    description: "It Tracks you daily and Montly Budget",
+    tech: ["React.js", "Redux", "TailwindCSS"],
+    github: "https://github.com/Gaurav23154/vibes-frontend.git",
+    livelink: "https://expensetrackercal.netlify.app/",
+  },
+  {
     title: "Pinterest Clone",
     description:
       "A Pinterest-like application built with modern web technologies. Explore, pin, and share inspiring images.",
     tech: ["React.js", "CSS", "Express.js", "Node.js"],
     github: "https://github.com/Gaurav23154/Pinterest-Clone.git",
     livelink: "https://github.com/Gaurav23154/Pinterest-Clone.git",
+  },
+  {
+    title: "Blogosphere",
+    description: "A full-stack blog application with auto-save draft feature, built with React, Express, and MongoDB.",
+    tech: ["JavaScript","CSS","TailwindCss","React.js","Framer-motion","React-router-dom","Node.js","Express.js","MongoDB"],
+    github: "https://github.com/Gaurav23154/Blogosphere.git",
+    liveLink: "https://github.com/Gaurav23154/Blogosphere.git",
   },
   {
     title:"Shopping Cart",
@@ -29,11 +51,11 @@ const projects = [
 
   },
   {
-    title: "Income Expense Tracker",
-    description: "It Tracks you daily and Montly Budget",
-    tech: ["React.js", "Redux", "TailwindCSS"],
-    github: "https://github.com/Gaurav23154/vibes-frontend.git",
-    livelink: "https://expensetrackercal.netlify.app/",
+    title: "Marvel Portfolio",
+    description: "A dynamic, Marvel-themed portfolio website built with React and modern web technologies.",
+    tech: ["JavaScript","CSS","TailwindCss","React.js","Framer-motion","React-router-dom"],
+    github: "https://github.com/Gaurav23154/marvel-portfolio.git",
+    livelink: "https://marvel-portfolio-five.vercel.app/",
   },
   {
     title: "Image Gallery",
@@ -44,9 +66,33 @@ const projects = [
     livelink: "https://imagegallerypro.netlify.app/",
   },
   {
+    title: "Rock Paper Scissors",
+    description:
+      "A game which we all played in childhood. Here you can play with computerand check your luck.",
+    tech: ["React.js", "Redux", "TailwindCSS", "JavaScript"],
+    github: "https://github.com/Gaurav23154/Rock-Paper-Scissor.git",
+    livelink: "https://rock-paper-scissor-topaz-alpha.vercel.app/",
+    
+  },
+  {
+    title: "Tic Tac Toe",
+    description: "An Exciting Game known by everyone",
+    tech: ["JavaScript","CSS"],
+    github: "https://github.com/Gaurav23154/JavaScript-Projects.git",
+    liveLink: "https://java-script-projects-brown.vercel.app/",
+  },
+ 
+  {
+    title: "Contact Management System",
+    description: "A modern, AI-powered contact management system built with the MERN stack",
+    tech: ["JavaScript","CSS","TailwindCss","React.js","Framer-motion","React-router-dom","Node.js","Express.js","MongoDB","OpenAI"],
+    github: "https://github.com/Gaurav23154/list-management.git",
+    liveLink: "https://github.com/Gaurav23154/list-management.git", 
+  },
+  {
     title: "Contact",
     description:
-      "A full-stack content management system with Markdown support and user authentication.",
+      "A full-stack content management system with Markdown support and user authentication---> UPCOMING.....",
     tech: ["React.js", "RestAPI", "CSS"],
     github: "",
   },
@@ -55,13 +101,6 @@ const projects = [
     description:
       "A modern shopping experience with cart, payment gateway, and product filtering ---> UPCOMING......",
     tech: ["React.js", "Stripe", "Firebase","TailwindCss"],
-  },
-  {
-    title: "Tic Tac Toe",
-    description: "An Exciting Game known by everyone",
-    tech: ["JavaScript","CSS"],
-    github: "https://github.com/Gaurav23154/JavaScript-Projects.git",
-    liveLink: "https://github.com/Gaurav23154/JavaScript-Projects.git",
   },
 ];
 
